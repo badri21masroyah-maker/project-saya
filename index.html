@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio Fais</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#2980b9,#6dd5fa);
+color:#333;
+}
+
+/* Container */
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar a{
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+color:#2980b9;
+}
+
+.navbar a:hover{
+color:#1abc9c;
+transition:0.3s;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero h2{
+color:#555;
+height:30px;
+}
+
+.foto-profil{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+/* SECTION */
+
+section{
+background:white;
+margin-top:30px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+color:#2980b9;
+}
+
+/* SERVICES */
+
+.project{
+margin-top:15px;
+padding:15px;
+border-radius:8px;
+background:#f5f5f5;
+transition:0.3s;
+}
+
+.project:hover{
+transform:scale(1.03);
+}
+
+/* PROJECT PORTFOLIO */
+
+.project-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+width:250px;
+transition:0.3s;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* SKILL */
+
+.skill{
+margin-top:20px;
+padding:15px;
+background:#f5f5f5;
+border-radius:10px;
+}
+
+.skill p{
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.skill-bar{
+background:#ddd;
+height:20px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.skill-fill{
+height:100%;
+width:0;
+background:#2980b9;
+transition:1s;
+}
+/* BUTTON */
+
+.btn{
+display:inline-block;
+background:#2980b9;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+text-decoration:none;
+margin-top:10px;
+}
+
+/* SCROLL ANIMATION */
+
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:0.6s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* DARK MODE */
+
+.dark{
+background:#121212;
+color:white;
+}
+
+.dark section{
+background:#1e1e1e;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+margin-top:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+    <div class="container">
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#project">Project</a>
+<a href="#skill">Skill</a>
+<a href="#kontak">Kontak</a>
+</div>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>Halo, Saya Fais 👋</h1>
+
+<h2><span id="typing"></span></h2>
+
+<p>Saya sedang belajar menjadi Software Engineer dan Mobile Developer.</p>
+
+<button onclick="darkMode()" class="btn">Dark Mode 🌙</button>
+
+<br><br>
+
+<a href="cv-fais.pdf" class="btn" download>Download CV 📄</a>
+
+</div>
+
+<img src="foto.jpg.jpeg" class="foto-profil">
+
+</div>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2>Layanan Saya</h2>
+
+<div class="project fade">
+<h3>Website Development</h3>
+<p>Saya membuat website menggunakan HTML, CSS, dan JavaScript.</p>
+</div>
+
+<div class="project fade">
+<h3>Mobile Development</h3>
+<p>Saya sedang belajar membuat aplikasi mobile.</p>
+</div>
+
+<div class="project fade">
+<h3>UI Design</h3>
+<p>Saya bisa membuat tampilan website yang menarik.</p>
+</div>
+
+</section>
+
+<!-- PROJECT -->
+
+<section id="project" class="fade">
+
+<h2>Project Saya</h2>
+
+<div class="project-container">
+
+<div class="card">
+<img src="project1.jpg.jpeg">
+
+<h3>Website Profil</h3>
+
+<p>Saya membuat website profil menggunakan HTML.</p>
+
+<a href="#" class="btn">Lihat Website</a>
+</div>
+
+<div class="card">
+<img src="project2.jpg.jpeg">
+
+<h3>Website Portfolio</h3>
+
+<p>Saya sedang belajar membuat website portfolio.</p>
+
+<a href="#" class="btn">Lihat Website</a>
+</div>
+
+<div class="card">
+<img src="project3.jpg.jpeg">
+
+<h3>Website Paguyuban</h3>
+
+<p>Website organisasi pemuda Ciduria.</p>
+
+<a href="#" class="btn">Lihat Website</a>
+</div>
+
+<div class="card">
+<img src="project4.jpg.jpeg">
+
+<h3>Landing Page Produk</h3>
+
+<p>Landing page untuk promosi produk.</p>
+
+<a href="#" class="btn">Lihat Website</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="skill" class="fade">
+
+<h2>Skill Saya</h2>
+
+<div class="skill">
+
+<p>🌐 HTML</p>
+
+<div class="skill-bar">
+<div class="skill-fill html"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>🎨 CSS</p>
+
+<div class="skill-bar">
+<div class="skill-fill css"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>⚡ JavaScript</p>
+
+<div class="skill-bar">
+<div class="skill-fill js"></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- KONTAK -->
+
+<section id="kontak" class="fade">
+
+<h2>Kontak Saya</h2>
+
+<a href="https://instagram.com/fahisb12" target="_blank" class="btn">
+Instagram Saya
+</a>
+
+</section>
+
+</div>
+
+<script>
+
+/* Dark Mode */
+
+function darkMode(){
+document.body.classList.toggle("dark");
+}
+
+/* Scroll Animation */
+
+const faders=document.querySelectorAll(".fade");
+
+window.addEventListener("scroll",function(){
+
+const triggerBottom=window.innerHeight*0.8;
+
+faders.forEach(function(el){
+
+const boxTop=el.getBoundingClientRect().top;
+
+if(boxTop<triggerBottom){
+el.classList.add("show");
+}
+
+});
+
+});
+/* Skill Animation */
+
+const skills=document.querySelectorAll(".skill-fill");
+
+window.addEventListener("scroll",function(){
+
+skills.forEach(function(skill){
+
+const skillTop=skill.getBoundingClientRect().top;
+const screenHeight=window.innerHeight;
+
+if(skillTop<screenHeight){
+
+if(skill.classList.contains("html")){
+skill.style.width="90%";
+}
+
+if(skill.classList.contains("css")){
+skill.style.width="80%";
+}
+
+if(skill.classList.contains("js")){
+skill.style.width="60%";
+}
+
+}
+
+});
+
+});
+
+/* Typing Animation */
+
+const text=[
+"Web Developer",
+"Mobile Developer",
+"Future Software Engineer"
+];
+
+let index=0;
+let charIndex=0;
+
+function type(){
+
+if(charIndex<text[index].length){
+
+document.getElementById("typing").textContent+=text[index].charAt(charIndex);
+
+charIndex++;
+
+setTimeout(type,100);
+
+}
+
+else{
+
+setTimeout(erase,2000);
+
+}
+
+}
+function erase(){
+
+if(charIndex>0){
+
+document.getElementById("typing").textContent=text[index].substring(0,charIndex-1);
+
+charIndex--;
+
+setTimeout(erase,50);
+
+}
+
+else{
+
+index++;
+
+if(index>=text.length){
+index=0;
+}
+
+setTimeout(type,500);
+
+}
+
+}
+
+type();
+
+</script>
+
+</body>
+</html>
